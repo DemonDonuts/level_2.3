@@ -41,5 +41,16 @@ function animate()
         player1.y += player1.speed;
     }
 
+    //player bounding
+    if (player1.y < 0)
+    {
+        player1.y = 0;
+    }
+    
+    if (player1.y + player1.height > canvas.height)
+    {
+        player1.y = canvas.height - player1.height;
+    }
+
     player1.drawRect(context);
 }
